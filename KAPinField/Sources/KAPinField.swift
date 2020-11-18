@@ -199,6 +199,10 @@ public class KAPinField : UITextField {
         return self.invisibleField.becomeFirstResponder()
     }
     
+    public override func reloadInputViews() {
+        invisibleField.reloadInputViews()
+    }
+    
     public func animateFailure(_ completion : (() -> Void)? = nil) {
         
         guard !self.isAnimating else {
